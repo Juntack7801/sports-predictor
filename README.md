@@ -1,6 +1,6 @@
 # sports-predictor
 
-기획서(`sports_prediction_app_spec.md`) 기반 파이프라인 프로젝트.
+기획서 기반으로 시작한 파이프라인 프로젝트입니다. (기획서 파일 자체는 이 저장소에는 포함되어 있지 않습니다.)
 1단계로 **MLB collector**만 구현되어 있음 (공식 API 기반, 검증 완료).
 
 ## 실행 방법
@@ -106,7 +106,9 @@ sports-predictor/
 │   ├── kbo_collector.py              # KBO 오늘 경기 수집 (스크래핑)
 │   ├── kbo_team_stats_collector.py   # KBO 팀 시즌 승률/평균득실 수집 (스크래핑)
 │   ├── npb_collector.py              # NPB 오늘 경기 수집 (스크래핑)
-│   └── npb_team_stats_collector.py   # NPB 팀 시즌 승률/평균득실 수집 (스크래핑)
+│   ├── npb_team_stats_collector.py   # NPB 팀 시즌 승률/평균득실 수집 (스크래핑)
+│   ├── betman_odds_collector.py      # 배트맨(betman.co.kr) 오버/언더 실제 배당 라인 수집
+│   └── team_name_map.py              # 배트맨 한글 팀명 ↔ DB 팀명(영문/일본어) 변환표
 ├── db/
 │   ├── schema.sql
 │   └── db.py                          # 연결/upsert/조회 헬퍼
